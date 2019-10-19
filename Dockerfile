@@ -9,5 +9,8 @@ RUN apk --no-cache --repository http://dl.alpinelinux.org/alpine/edge/testing/ a
 # Set nut to be a netserver, docker container is not useful without this mode
 RUN sed -i 's/MODE=none/MODE=netserver/' /etc/nut/nut.conf
 
+# Add Entrypoint to container
+COPY entrypoint.sh /entrypoint.sh
+
 # Run NUT UPSD + UPSDriver + UPSLog + UPSMon
 ENTRYPOINT /entrypoint.sh
