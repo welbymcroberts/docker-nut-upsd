@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Create nut run directory
 mkdir -p /var/run/nut
 mkdir -p /run/nut
