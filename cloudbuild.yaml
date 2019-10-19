@@ -1,7 +1,7 @@
 steps:
   # Build out contianer, tag with :latest and the commit SHA
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/nut:latest', '-t', 'gcr.io/$PROJECT_ID/nut:$COMMIT_SHA'.']
+    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/nut:latest', '-t', 'gcr.io/$PROJECT_ID/nut:$COMMIT_SHA', '.']
 # Upload both images
 images:
   - 'gcr.io/$PROJECT_ID/nut:latest'
